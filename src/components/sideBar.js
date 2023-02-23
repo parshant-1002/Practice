@@ -6,7 +6,7 @@ export default function SideBar() {
     const show = useNavigate()
     const home = useNavigate()
     return (
-        <div className=" justify-content-end p-2">
+        <div className=" justify-content-end border border-4 p-2">
 
             <button className='btn  px-5 justify-content-center me-4 btn-dark d-flex d-grid w-100 my-3' onClick={() => { show("/Show") }} >Click to Show </button>
 

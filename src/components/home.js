@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios"
 
-import SideBar from './sideBar';
+
 
 
 export default function Home() {
@@ -90,7 +90,7 @@ export default function Home() {
 
 
   return (
-    <div className="  justify-content-center w-100">
+    <div className=" px-5 mx-5 justify-content-center w-50 ">
 
       <div className='p-5 row-2' >
         <div className="column  border border-dark  rounded-4   ">

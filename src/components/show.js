@@ -19,7 +19,7 @@ export default function Show() {
   return (
     <div className="  justify-content-center w-100">
      
-      <div className="row p-3 px-5 pe-5">
+      <div className="row p-5 px-5 pe-5">
         <div className="column-md-12 ">
           <table className="table table-bordered table-secondary caption-top">
             <thead >
