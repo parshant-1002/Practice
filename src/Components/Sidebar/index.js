@@ -15,10 +15,10 @@ export default function Sidebar() {
     <div>
         <div className='chatNav'>
 
-        <Navbarr></Navbarr>
+        <Navbarr sidebar={false}></Navbarr>
         </div>
         <div className="chatList">
-        <div>
+        <div className='searchbar'>
         <Search
         placeholder="Search..."
       />

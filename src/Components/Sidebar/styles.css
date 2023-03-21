@@ -7,3 +7,10 @@
     border-width: thin;
     border-color:  rgb(149, 156, 154);
 }
+.searchbar{
+    border:solid;
+    border-width: thin;
+    border-color:  rgb(149, 156, 154);
+    margin: 5px;
+    border-radius:4px ;
+}
