@@ -1,0 +1,25 @@
+.input{
+    display: flex;
+    width: 69%;
+  position:absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.messageinput{
+   border: solid;
+   border-width: thin;
+    width:90%;
+    border-radius: 3px;
+    border-color: rgb(149, 156, 154);
+}
+.messagebutton{
+    margin-left: 50px;
+    width:20%
+}
+.contentNav{
+    border-bottom:solid;
+    border-width: thin;
+    border-color: rgb(149, 156, 154);
+
+}

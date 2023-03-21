@@ -1,0 +1,9 @@
+.chatList{
+    height:88vmin;
+    border-right: 3mm ridge rgba(58, 198, 161, 0.6);
+}
+.chatNav{
+    border-bottom:solid;
+    border-width: thin;
+    border-color:  rgb(149, 156, 154);
+}
