@@ -2,7 +2,7 @@ import './App.css';
 import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
+
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 
 function CustomMap({ customIcon, coords = [], address = "" }) {
