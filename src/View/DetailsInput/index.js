@@ -4,30 +4,24 @@ import axios from "axios"
 
 
 
-export default function Home() {
+export default function DetailsInput() {
 
   const [name, setName] = useState("")
   const [age, setAge] = useState("")
   const [Email, setEmail] = useState("")
   const [Contact, setContact] = useState("")
-
   const [valid, setvalid] = useState(false)
   const [message, setMessage] = useState("")
-
-
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (name.trim() === "" || age.trim() === "" || Email.trim() === "" || Contact.trim() === "") {
       alert("Enter all the credentials!!")
     }
-
     if (name.trim() !== "" && age.trim() !== "" && Email.trim() !== "" && Contact.trim() !== "") {
-      if (Contact.trim().length == 10 && name.trim().split("").every((val) => { return isNaN(val) })) {
+      if (Contact.trim().length === 10 && name.trim().split("").every((val) => { return isNaN(val) })) {
         alert("form has been submited")
-        axios.post("https://63f475483f99f5855dafe49b.mockapi.io/crud", {
+        axios.post("https://6406ceb877c1a905a0e3b7d3.mockapi.io/data", {
           e_name: name,
           e_age: age,
           e_email: Email,

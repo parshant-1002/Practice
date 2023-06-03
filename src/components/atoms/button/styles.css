@@ -1,0 +1,9 @@
+.customButton{
+    width:100%;
+    color:white;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    height: 5vh;
+    font-size: 3vh;
+}

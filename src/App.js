@@ -1,29 +1,26 @@
 
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/home';
-import Show from './components/show';
-import SideBar from './components/sideBar';
+import SideBar from './View/SideBar';
+import DetailsInput from './View/DetailsInput';
+import DetailsShow from './View/DetailsShow';
 
 
 
 function App() {
   return (
     <>
-      <h1 className="bg-dark p-3 text-center m-1 rounded-2  text-white">Crud App</h1>
-      <div className="d-flex">
-        <div className=" justify-content-start ">
-
+      <label className="Heading">Crud App</label>
+      <div className="main">
+        <div className="sideBar">
           <SideBar />
         </div>
-        <div className="d-flex justify-content-end p-1 w-75">
-
+        <div className="content">
           <Routes>
-            <Route exact path="/" element={<Home />}> </Route>
-            <Route path="/show" element={<Show />}> </Route>
+            <Route exact path="/" element={<DetailsInput />}> </Route>
+            <Route path="/show" element={<DetailsShow />}> </Route>
           </Routes>
         </div>
-
       </div>
     </>
 

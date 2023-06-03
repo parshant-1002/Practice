@@ -2,11 +2,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 
-export default function Show() {
+export default function DetailsShow() {
   const [apidata, setApiData] = useState([])
 
   function getData() {
-    axios.get("https://63f475483f99f5855dafe49b.mockapi.io/crud")
+    axios.get("https://6406ceb877c1a905a0e3b7d3.mockapi.io/data")
       .then((val) => setApiData(val.data))
   }
 
@@ -45,8 +45,8 @@ export default function Show() {
                         <td>{item.e_age}</td>
                         <td>{item.e_email}</td>
                         <td>{item.e_contact}</td>
-                        <td><button className="btn btn-dark mx-2 my-4'" >Edit</button></td>
-                        <td><button className="btn btn-danger mx-3 my-4'">Delete</button></td>
+                        <td><button className="btn btn-dark mx-2 my-4" onClick={()=>{}} >Edit</button></td>
+                        <td><button className="btn btn-danger mx-3 my-4"  onClick={()=>{}} >Delete</button></td>
 
                       </tr>
 
