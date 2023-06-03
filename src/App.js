@@ -1,26 +1,15 @@
-import './App.css';
 import React from 'react';
-import L from 'leaflet'; // Import the Leaflet library
+import Bargraph from './Components/Bargraph';
+import "./App.css"
 
-
-import CustomMap from './CustomMap';
-
-// Custom marker icon
-const customIcon = L.icon({
-  iconUrl: require('./marker.png'), // Replace with the path to your custom marker icon
-  iconSize: [40, 41],
-  iconAnchor: [20, 35],
-  popupAnchor: [1, -34],
-  tooltipAnchor: [16, -28],
-});
-
-function App() {
+const App = () => {
+ 
   return (
-    <>
+    <div className='barGraph'>
 
-      <CustomMap customIcon={customIcon} address={"hoshiarpur,india"} coords={[]} />
-    </>
+    <Bargraph/>
+    </div>
   );
-}
+};
 
 export default App;
