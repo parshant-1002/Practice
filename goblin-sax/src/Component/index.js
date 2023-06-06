@@ -1,11 +1,5 @@
-import React from 'react'
+import { Web3Button } from '@web3modal/react'
 
-export default function ConnectWallet() {
-  return (
-    <div>
-        
-
-    </div>
-  )
+export default function HomePage() {
+  return <Web3Button />
 }
-

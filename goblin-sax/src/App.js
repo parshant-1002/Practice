@@ -1,16 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import ConnectWallet from './Component';
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { arbitrum, mainnet, polygon } from 'wagmi/chains'
+import HomePage from './Component'
 
-function App() {
+const chains = [arbitrum, mainnet, polygon]
+const projectId = '5380ffb901624cfb8e5b09c1a697b293'
+
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, version: 1, chains }),
+  publicClient
+})
+const ethereumClient = new EthereumClient(wagmiConfig, chains)
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Connect Wallet
-        <ConnectWallet/>
-      </header>
-    </div>
-  );
-}
+    <>
+      <WagmiConfig config={wagmiConfig}>
+        <HomePage />
+      </WagmiConfig>
 
-export default App;
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    </>
+  )
+}
