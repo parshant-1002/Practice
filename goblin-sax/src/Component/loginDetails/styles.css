@@ -1,0 +1,13 @@
+.buttonWalletConnect{
+    display: flex;
+    justify-content: center;
+    margin-top:30vh ;
+    
+   
+}
+.buttonWalletConnect-Container{
+    background-color: #fff;
+    height:40vh;
+    width:30%;
+    border-radius: 10px;
+}
