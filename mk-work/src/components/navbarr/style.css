@@ -1,0 +1,51 @@
+.home {
+    width: 71px;
+    height: 28px;
+    top: 115px;
+    left: 137px;
+    border: 1px;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    color: white
+}
+
+.about {
+    width: 71px;
+    height: 28px;
+    top: 115px;
+    left: 314px;
+    border: 1px;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    color: white
+}
+
+.productsNav {
+    width: 159px;
+    height: 123px;
+    top: 115px;
+    left: 490px;
+    border: 1px;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    color: white
+}
+
+
+
+

@@ -4,6 +4,9 @@ import "./style.css";
 import rectangle from "../../assets/Rectangle.png"
 import person from "../../assets/person.png"
 import footer from "../../assets/footer.png"
+import Button from "../../assets/Button.png"
+
+import { validEmail, validText } from '../../shared/utilities';
 
 export default function NewProducts() {
     const [productCategories, setProductCategories] = useState([]);
@@ -40,6 +43,37 @@ export default function NewProducts() {
 
         setProductToShow(filteredProducts?.length ? filteredProducts : product);
     }
+
+    const handleSubmit = () => {
+        let errors = {};
+
+        if (!email) {
+            errors.email = "Enter email";
+        } else if (!validEmail.test(email)) {
+            errors.email = "Enter valid email";
+        }
+
+        if (!name) {
+            errors.name = "Enter name";
+        } else if (!validText.test(name)) {
+            errors.name = "Enter valid name";
+        }
+
+        if (!message) {
+            errors.message = "Enter message";
+        } else if (!validText.test(message)) {
+            errors.message = "Enter valid message";
+        }
+
+        if (Object.keys(errors).length === 0) {
+            alert("Form submitted!!");
+        } else {
+            setEmailError(errors.email || "");
+            setNameError(errors.name || "");
+            setMessageError(errors.message || "");
+        }
+    }
+
     return (
         <>
             <div>
@@ -86,43 +120,30 @@ export default function NewProducts() {
             <div>
                 <label className='form1' >Name</label>
                 <input className='input1' value={name} onChange={(e) => {
-                    if (isNaN(e.target.value)) {
-                        setName(e.target.value)
-                        setNameError("")
-                    }
-                    else {
-                        setNameError("Enter valid name")
-                    }
+                    setName(e.target.value)
+                    setNameError("")
+
                 }}></input>
                 <label className='error1'>{nameError}</label>
                 <label className='form2'>Email</label>
                 <input className='input2' value={email} onChange={(e) => {
-                  const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    setEmail(e.target.value)
+                    setEmailError("")
 
-                    console.log(emailPattern.test(e.target.value), "kshfsgdfhsdgghf")
-                    // if (emailPattern.test(e.target.value)) {
-                    //     setEmail(e.target.value)
-                    //     setEmailError("")
-                    // }
-                    // else {
-                    //     setEmailError("Enter valid email")
-                    // }
                 }}></input>
                 <label className='error2'>{emailError}</label>
 
                 <label className='form3'>Message</label>
                 <input className='input3' value={message} onChange={(e) => {
-                    if (isNaN(e.target.value)) {
-                        setMessage(e.target.value)
-                        setMessageError("")
+                    setMessage(e.target.value)
+                    setMessageError("")
 
-                    }
-                    else {
-                        setMessageError("Enter valid message")
-                    }
                 }}></input>
                 <label className='error3'>{messageError}</label>
-
+                <img src={Button} alt="Button" onClick={handleSubmit} className='send' />
+                <div className='footer-text'>
+                    <label className='d-flex justify-content-center text-white '>Copyright 2022 All Right Reserved By SG</label>
+                </div>
             </div>
         </>
     )

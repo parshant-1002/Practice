@@ -2,6 +2,12 @@
     display: flex;
     width: 70%;
     overflow-x: scroll;
+    scrollbar-width: thin;
+}
+
+.products::-webkit-scrollbar {
+    width: 5px;
+    /* width of the entire scrollbar */
 }
 
 .category {
@@ -43,7 +49,7 @@
 }
 
 .back-ground-header {
-    width: 1440px;
+    width: 100%;
     height: 749px;
     top: 41px;
     opacity: 0.5px;
@@ -54,8 +60,8 @@
 .fresh {
     width: 689px;
     height: 151px;
-    top: 280px;
-    left: 115px;
+    top: 38%;
+    left: 10%;
     border: 1px;
     color: white;
     position: absolute;
@@ -72,8 +78,8 @@
 .fresh1 {
     width: 710px;
     height: 144px;
-    top: 396px;
-    left: 424px;
+    top: 52%;
+    left: 28%;
     border: 2px;
 
     color: white;
@@ -89,8 +95,8 @@
 .fresh2 {
     width: 527px;
     height: 103px;
-    top: 505px;
-    left: 187px;
+    top: 70%;
+    left: 15%;
     border: 1px;
 
     color: white;
@@ -106,10 +112,10 @@
 }
 
 .back-ground-orange-header {
-    width: 993px;
+    width: 70%;
     height: 354.3px;
-    top: 344.62px;
-    left: 447px;
+    top: 52%;
+    left: 30%;
     opacity: 0.2px;
     background: #F07E15;
     position: absolute;
@@ -119,16 +125,15 @@
 .person {
     width: 432px;
     height: 654.95px;
-    top: 133.05px;
-    left: 899px;
+    top: 20%;
+    left: 60%;
     position: absolute;
 
 }
 
 .footer {
-    width: 1440px;
+    width: 100%;
     height: 520px;
-    top: 1562px;
     /* position: absolute; */
 
 }
@@ -136,8 +141,8 @@
 .footertext1 {
     width: 385px;
     height: 52px;
-    top: 1644px;
-    left: 103px;
+    top: 220%;
+    left: 7%;
     font-family: Syne;
     font-size: 26px;
     font-weight: 600;
@@ -152,8 +157,8 @@
 .footertext2 {
     width: 337px;
     height: 52px;
-    top: 1661px;
-    left: 103px;
+    top: 225%;
+    left: 7%;
     font-family: Work Sans;
     font-size: 18px;
     font-weight: 400;
@@ -169,8 +174,8 @@
 .footertext3 {
     width: 1159px;
     height: 236px;
-    top: 1746px;
-    left: 90px;
+    top: 240%;
+    left: 7%;
     border: 1px;
     font-family: Syne;
     font-size: 150px;
@@ -247,33 +252,36 @@
 .error1 {
     width: 300px;
     height: 30px;
-    top: 1540px;
-    left: 800px;
+    top: 1530px;
+    left: 620px;
     position: absolute;
     background: none;
     border: none;
     color: red;
 }
+
 .error2 {
     width: 300px;
     height: 30px;
-    top: 1570px;
-    left: 800px;
+    top: 1580px;
+    left: 620px;
     position: absolute;
     background: none;
     border: none;
     color: red;
 }
+
 .error3 {
     width: 300px;
     height: 30px;
-    top: 1640px;
-    left: 800px;
+    top: 1630px;
+    left: 630px;
     position: absolute;
     background: none;
     border: none;
     color: red;
 }
+
 .input1 {
     width: 300px;
     height: 30px;
@@ -311,4 +319,21 @@
     color: rgba(255, 255, 255, 0.5);
 
 
+}
+
+.send {
+    cursor: pointer;
+    width: 181px;
+    height: 181px;
+    top: 1670px;
+    left: 1142px;
+    position: absolute;
+
+}
+
+.footer-text{
+    background-color: black;
+    width:100%;
+    height: 50px;
+    padding-top: 10px;
 }
