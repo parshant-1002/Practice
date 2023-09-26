@@ -1,32 +1,30 @@
-
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import SideBar from './View/SideBar';
-import DetailsInput from './View/DetailsInput';
-import DetailsShow from './View/DetailsShow';
-
-
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import DetailsShow from "./View/DetailsShow";
+import NavScrollExample from "./View/navbar";
+import DetailsEdit from "./View/DetailsEdit";
 
 function App() {
   return (
     <>
-      <label className="Heading">Crud App</label>
+      <label className=" w-100 ">
+        <NavScrollExample />
+      </label>
       <div className="main">
-        <div className="sideBar">
-          <SideBar />
-        </div>
         <div className="content">
           <Routes>
-            <Route exact path="/" element={<DetailsInput />}> </Route>
-            <Route path="/show" element={<DetailsShow />}> </Route>
+            <Route
+              path="/show"
+              element={<DetailsShow />}
+            ></Route>
+            <Route
+              path="/edit/:id?"
+              element={<DetailsEdit />}
+            ></Route>{" "}
           </Routes>
         </div>
       </div>
     </>
-
-
-
-
   );
 }
 
