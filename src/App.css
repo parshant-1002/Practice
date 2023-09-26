@@ -1,27 +1,38 @@
 .Heading {
-  width: 100vw;
+  width: 100%;
   background-color: black;
   color: white;
-  height: 7vh;
+  font-size: 50px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  font-size: 6vh;
-
+  align-items: center;
 }
-.main{
+.main {
   display: flex;
 }
-.sideBar{
+.sideBar {
   display: flex;
   flex-direction: column;
-  width:20vw;
-  gap:2vh;
-  padding:1vh;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
 }
-.content{
+.content {
   padding-top: 5vh;
   padding-left: 20vw;
-  width:40vw;
+  width: 40vw;
+}
+
+@media (max-width: 400px) {
+  .Heading {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
