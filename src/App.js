@@ -1,28 +1,12 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import DetailsShow from "./View/DetailsShow";
-import NavScrollExample from "./View/navbar";
-import DetailsEdit from "./View/DetailsEdit";
+import ParentComponent from "./View/ParentComponent";
 
 function App() {
   return (
     <>
-      <label className=" w-100 ">
-        <NavScrollExample />
-      </label>
-      <div className="main">
-        <div className="content">
-          <Routes>
-            <Route
-              path="/show"
-              element={<DetailsShow />}
-            ></Route>
-            <Route
-              path="/edit/:id?"
-              element={<DetailsEdit />}
-            ></Route>{" "}
-          </Routes>
-        </div>
+      <h1 className=" w-100 ">Increment-decrement</h1>
+      <div>
+        <ParentComponent />
       </div>
     </>
   );
